@@ -1,0 +1,8 @@
+{
+  "jupyter.lab.shortcuts": [],
+  "title": "tracking-test",
+  "description": "tracking-test settings.",
+  "type": "object",
+  "properties": {},
+  "additionalProperties": false
+}

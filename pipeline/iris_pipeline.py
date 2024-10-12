@@ -60,15 +60,17 @@ def svc_trainer(
     model.fit(X_train, y_train)
     train_acc = model.score(X_train, y_train)
     logging.info(f"Training accuracy: {train_acc:.4f}")
-    
-    step_context = get_step_context()
 
     log_model_metadata(
             metadata={
                 "evaluation_metrics":{
                     "accuracy": train_acc
                     }
-                }
+                },
+                # Omitted model_name will use the model in the current context
+                 model_name="zenml_model_name",
+                # Omitted model_version will default to 'latest'
+                model_version="zenml_model_version",
             )
     
     return model
