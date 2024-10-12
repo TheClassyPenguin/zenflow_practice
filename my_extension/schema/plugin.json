@@ -1,8 +1,37 @@
 {
-  "jupyter.lab.shortcuts": [],
-  "title": "tracking-test",
-  "description": "tracking-test settings.",
+  "title": "Tracking Test Settings",
+  "description": "Settings for the tracking-test extension",
   "type": "object",
-  "properties": {},
+  "properties": {
+    "enableTracking": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enable or disable tracking of global events."
+    },
+    "includedEvents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "focus",
+        "click",
+        "close",
+        "cut",
+        "copy",
+        "paste",
+        "dblclick",
+        "drag",
+        "drop",
+        "input",
+        "stalled",
+        "submit",
+        "toggle",
+        "error",
+        "unload"
+      ],
+      "description": "List of events to track when interactions occur."
+    }
+  },
   "additionalProperties": false
 }
